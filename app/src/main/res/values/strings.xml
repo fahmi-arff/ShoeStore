@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="register_btn">Register</string>
+    <string name="login_btn">Login</string>
+    <string name="welcome_title">Welcome My Coworker</string>
+    <string name="continue_btn">Continue</string>
+    <string name="instruction_title">Instruction</string>
+</resources>
