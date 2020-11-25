@@ -7,25 +7,76 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.fahmi.shoestore.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:name="com.fahmi.shoestore.screen.login.LoginFragment"
+        android:label="@string/title_login_fragment"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_loginFragment_to_shoesListFragment"
+            app:destination="@id/shoesListFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.fahmi.shoestore.WelcomeFragment"
-        android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" >
+        android:name="com.fahmi.shoestore.screen.welcome.WelcomeFragment"
+        android:label="@string/title_welcome_fragment"
+        tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
-            app:destination="@id/instructionFragment" />
+            app:destination="@id/instructionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
-        android:name="com.fahmi.shoestore.InstructionFragment"
-        android:label="fragment_instruction"
-        tools:layout="@layout/fragment_instruction" />
+        android:name="com.fahmi.shoestore.screen.instruction.InstructionFragment"
+        android:label="@string/title_instruction_fragment"
+        tools:layout="@layout/fragment_instruction">
+        <action
+            android:id="@+id/action_instructionFragment_to_shoesListFragment"
+            app:destination="@id/shoesListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoesListFragment"
+        android:name="com.fahmi.shoestore.screen.shoelist.ShoesListFragment"
+        android:label="@string/title_shoes_list_fragment"
+        tools:layout="@layout/fragment_shoes_list">
+        <action
+            android:id="@+id/action_shoesListFragment_to_shoeDetailFragment"
+            app:destination="@id/shoeDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/shoeDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.fahmi.shoestore.screen.shoedetail.ShoeDetailFragment"
+        android:label="@string/title_shoe_detail_fragment"
+        tools:layout="@layout/fragment_shoe_detail">
+        <action
+            android:id="@+id/action_shoeDetailFragment_to_shoesListFragment"
+            app:destination="@id/shoesListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/shoesListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

@@ -4,7 +4,33 @@
     <string name="hint_password">Password</string>
     <string name="register_btn">Register</string>
     <string name="login_btn">Login</string>
-    <string name="welcome_title">Welcome My Coworker</string>
+    <string name="welcome_title">Welcome to ShoeStore App</string>
+    <string name="welcome_content">A shoe is an item of footwear intended to protect and comfort the human foot. Shoes are also used as an item of decoration and fashion. The design of shoes has varied enormously through time and from culture to culture, with appearance originally being tied to function. Additionally, fashion has often dictated many design elements, such as whether shoes have very high heels or flat ones. </string>
     <string name="continue_btn">Continue</string>
     <string name="instruction_title">Instruction</string>
+    <string name="shoe_list_title">Shoe List</string>
+    <string name="add_btn_desc">For add new shoes</string>
+    <string name="title_login_fragment">LOGIN</string>
+    <string name="title_welcome_fragment">WELCOME</string>
+    <string name="title_instruction_fragment">INSTRUCTION</string>
+    <string name="title_shoes_list_fragment">SHOES LIST</string>
+    <string name="title_shoe_detail_fragment">SHOE DETAIL</string>
+    <string name="logout_menu">Logout</string>
+    <string name="wrong_email_or_password">Email / Password Mismatch!</string>
+    <string name="shoe_name">Name</string>
+    <string name="company_name">Company</string>
+    <string name="shoe_size">Size</string>
+    <string name="shoe_desc">Description</string>
+    <string name="shoe_name_hint">Enter shoe name</string>
+    <string name="shoe_company_hint">Enter shoe company</string>
+    <string name="shoe_size_hint">Enter shoe size</string>
+    <string name="shoe_desc_hint">Enter shoe description</string>
+    <string name="save_btn">SAVE</string>
+    <string name="cancel_btn">CANCEL</string>
+    <string name="instruction_content">
+        How To add Shoe to the List : \n\n
+        1. Add list with click add button ( + ) \n
+        2. Fill the form of Shoe detail\n
+        3. Click Save to add your shoe to the list
+    </string>
 </resources>

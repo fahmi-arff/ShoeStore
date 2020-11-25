@@ -1,6 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fahmi.shoestore.screen.shoedetail.ShoeDetailFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="shoeListViewModel"
+            type="com.fahmi.shoestore.ShoesListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/shoe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/shoe_name"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shoe_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/company_name"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/shoe_name"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name" />
+
+        <TextView
+            android:id="@+id/shoe_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/shoe_size"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/shoe_company"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_company" />
+
+        <TextView
+            android:id="@+id/shoe_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/shoe_desc"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/shoe_size"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_size" />
+
+        <EditText
+            android:id="@+id/shoe_name_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="24dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/shoe_name_hint"
+            android:inputType="textPersonName"
+            android:text="@={shoeListViewModel.shoe.name}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/shoe_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toEndOf="@+id/shoe_name" />
+
+        <EditText
+            android:id="@+id/shoe_company_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/shoe_company_hint"
+            android:inputType="textPersonName"
+            android:text="@={shoeListViewModel.shoe.company}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/shoe_company"
+            app:layout_constraintEnd_toEndOf="@+id/shoe_name_field"
+            app:layout_constraintStart_toStartOf="@+id/shoe_name_field" />
+
+        <EditText
+            android:id="@+id/shoe_size_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/shoe_size_hint"
+            android:inputType="number|numberDecimal"
+            android:text="@={shoeListViewModel.shoe.size}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/shoe_size"
+            app:layout_constraintEnd_toEndOf="@+id/shoe_company_field"
+            app:layout_constraintStart_toStartOf="@+id/shoe_company_field" />
+
+        <EditText
+            android:id="@+id/shoe_desc_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/shoe_desc_hint"
+            android:inputType="textPersonName"
+            android:text="@={shoeListViewModel.shoe.description}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/shoe_desc"
+            app:layout_constraintEnd_toEndOf="@+id/shoe_size_field"
+            app:layout_constraintStart_toStartOf="@+id/shoe_size_field" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:onClick="@{() -> shoeListViewModel.addShoesToList()}"
+            android:text="@string/save_btn"
+            app:backgroundTint="#8BC34A"
+            app:layout_constraintStart_toStartOf="@+id/shoe_desc_field"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_desc_field" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_btn"
+            app:backgroundTint="#F44336"
+            app:layout_constraintBaseline_toBaselineOf="@+id/save_btn"
+            app:layout_constraintStart_toStartOf="@+id/shoe_desc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
